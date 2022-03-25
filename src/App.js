@@ -5,7 +5,7 @@ import FacebookLoginComponent from './facebooklogin.component';
 function App() {
   return (
     <div className="App">
-       <h1>Facebook Login Login Tutorial in React App</h1> 
+       <h1>Facebook Login Tutorial in React App</h1> 
        
        <FacebookLoginComponent />
 
