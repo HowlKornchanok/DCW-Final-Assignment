@@ -1,6 +1,6 @@
 .navbar {
   height: 50px;
-  background-color: rgba(102, 16, 83, 0.698);
+  background-color: rgb(0, 0, 0);
   color: white;
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@
 .cardButton {
   border: none;
   border-radius: 10px;
-  background-color: rgba(53, 16, 102, 0.678);
+  background-color: rgba(0, 0, 0, 0.678);
   padding: 10px;
   color: white;
   font-weight: bold;
@@ -190,7 +190,7 @@ input{
 
 .submit{
   width: 200px;
-  background-color: rgba(128, 0, 128, 0.671);
+  background-color: rgba(0, 0, 0, 0.671);
   color: white;
   font-weight: bold;
   border: none;
