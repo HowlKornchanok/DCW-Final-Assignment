@@ -19,6 +19,10 @@ const Login = () => {
     <div className="login">
       <h1 className="loginTitle">Choose a Login Method</h1>
       <div className="wrapper">
+      <div className="center">
+          
+          <div>SOCIAL LOGIN</div>
+        </div>
         <div className="left">
           <div className="loginButton google" onClick={google}>
             <img src={Google} alt="" className="icon" />
@@ -34,13 +38,8 @@ const Login = () => {
           </div>
         </div>
         <div className="center">
-          <div className="line" />
-          <div className="or">OR</div>
-        </div>
-        <div className="right">
-          <input type="text" placeholder="Username" />
-          <input type="text" placeholder="Password" />
-          <button className="submit">Login</button>
+          
+          <div>THANK YOU</div>
         </div>
       </div>
     </div>
