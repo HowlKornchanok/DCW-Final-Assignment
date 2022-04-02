@@ -20,8 +20,6 @@ const Login = () => {
       <h1 className="loginTitle">Choose a Login Method</h1>
       <div className="wrapper">
       <div className="center">
-          
-          <div>SOCIAL LOGIN</div>
         </div>
         <div className="left">
           <div className="loginButton google" onClick={google}>
@@ -39,7 +37,6 @@ const Login = () => {
         </div>
         <div className="center">
           
-          <div>THANK YOU</div>
         </div>
       </div>
     </div>
