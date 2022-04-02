@@ -26,14 +26,16 @@ const Login = () => {
             <img src={Google} alt="" className="icon" />
             Google
           </div>
-          <div className="loginButton facebook" onClick={facebook}>
-            <img src={Facebook} alt="" className="icon" />
-            Facebook
-          </div>
           <div className="loginButton github" onClick={github}>
             <img src={Github} alt="" className="icon" />
             Github
           </div>
+
+          <div className="loginButton facebook" onClick={facebook}>
+            <img src={Facebook} alt="" className="icon" />
+            Facebook(Error)
+          </div>
+          
         </div>
         <div className="center">
           
