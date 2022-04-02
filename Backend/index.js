@@ -7,7 +7,13 @@ const passportSetup = require("./passport");
 const passport = require("passport");
 const authRoute = require("./routes/auth");
 const app = express();
+const rfs = require("rotating-file-stream");
+const { createLogger, format, transports } = require('winston');
+const fs = require('fs');
+const path = require('path');
 
+app.use(morgan('dev'));
+app.use(morgan('common', {stream: fs.createWriteStream('logs/access.log')}));
 
 app.use(
   cookieSession({ name: "session", keys: ["Howl"], maxAge: 24 * 60 * 60 * 100 })
@@ -32,44 +38,44 @@ app.listen("5000", () => {
 
 
 'use strict';
-const { createLogger, format, transports } = require('winston');
-require('winston-daily-rotate-file');
-const fs = require('fs');
-const path = require('path');
+
 
 const env = process.env.NODE_ENV || 'development';
-const logDir = 'log';
+const logDir = 'logs';
 
 // Create the log directory if it does not exist
 if (!fs.existsSync(logDir)) {
   fs.mkdirSync(logDir);
 }
 
-const dailyRotateFileTransport = new transports.DailyRotateFile({
-  filename: `${logDir}/%DATE%-results.log`,
-  datePattern: 'YYYY-MM-DD'
-});
+const filename = path.join(logDir, 'results.log');
 
 const logger = createLogger({
   // change level if in dev environment versus production
-  level: env === 'development' ? 'verbose' : 'info',
+  level: env === 'production' ? 'info' : 'debug',
   format: format.combine(
-    format.timestamp({
-      format: 'YYYY-MM-DD HH:mm:ss'
-    }),
-    format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`)
+    format.label({ label: path.basename(process.mainModule.filename) }),
+    format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' })
   ),
   transports: [
     new transports.Console({
-      level: 'info',
       format: format.combine(
         format.colorize(),
         format.printf(
-          info => `${info.timestamp} ${info.level}: ${info.message}`
+          info =>
+            `${info.timestamp} ${info.level} [${info.label}]: ${info.message}`
         )
       )
     }),
-    dailyRotateFileTransport
+    new transports.File({
+      filename,
+      format: format.combine(
+        format.printf(
+          info =>
+            `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`
+        )
+      )
+    })
   ]
 });
 
@@ -79,3 +85,5 @@ logger.info('info message');
 logger.verbose('verbose message');
 logger.debug('debug message');
 logger.silly('silly message');
+
+

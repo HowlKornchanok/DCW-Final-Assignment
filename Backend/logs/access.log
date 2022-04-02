@@ -1,0 +1,9 @@
+::1 - - [02/Apr/2022:17:15:46 +0000] "GET /auth/google/callback?code=4/0AX4XfWjVyDIE9ela6itYHQhGI4F8RK-WImWuIj81VI_5I-4C1d8Ov7iS_309zD_VoTo7cA&scope=profile%20https://www.googleapis.com/auth/userinfo.profile HTTP/1.1" 302 88
+::1 - - [02/Apr/2022:17:15:46 +0000] "OPTIONS /auth/login/success HTTP/1.1" 204 0
+::1 - - [02/Apr/2022:17:15:46 +0000] "GET /auth/login/success HTTP/1.1" 304 -
+::1 - - [02/Apr/2022:17:15:49 +0000] "GET /auth/logout HTTP/1.1" 302 88
+::1 - - [02/Apr/2022:17:16:04 +0000] "GET /auth/github HTTP/1.1" 302 0
+::1 - - [02/Apr/2022:17:16:06 +0000] "GET /auth/github/callback?code=f345300565ef3006a8fe HTTP/1.1" 302 88
+::1 - - [02/Apr/2022:17:16:06 +0000] "GET /auth/login/success HTTP/1.1" - -
+::1 - - [02/Apr/2022:17:16:06 +0000] "OPTIONS /auth/login/success HTTP/1.1" 204 0
+::1 - - [02/Apr/2022:17:16:06 +0000] "GET /auth/login/success HTTP/1.1" 200 2852
