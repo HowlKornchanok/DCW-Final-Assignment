@@ -132,27 +132,7 @@
   position: relative;
 }
 
-.or{
-  border: 2px solid lightgray;
-  border-radius: 50%;
-  padding: 10px;
-  color: gray;
-  background-color: white;
-  font-weight: bold;
-}
 
-.line{
-  width: 0.5px;
-  height: 70%;
-  background-color: lightgray;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: -1;
-}
 
 .loginButton{
   width: 150px;

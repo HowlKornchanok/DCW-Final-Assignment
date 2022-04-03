@@ -11,23 +11,17 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.2",
-    "cli-highlight": "^2.1.11",
     "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
-    "inspirational-quotes": "^2.0.1",
     "morgan": "^1.10.0",
-    "multer": "^1.4.4",
     "nodemon": "^2.0.15",
     "passport": "^0.5.2",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.12",
     "passport-google-oauth20": "^2.0.0",
     "path": "^0.12.7",
-    "rotating-file-stream": "^3.0.3",
-    "winston": "^3.6.0",
-    "winston-daily-rotate-file": "^4.6.1",
-    "winston-mongodb": "^5.0.7"
+    "winston": "^3.6.0"
   }
 }

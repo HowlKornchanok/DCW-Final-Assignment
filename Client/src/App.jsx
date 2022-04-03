@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const App = () => {
   const [user, setUser] = useState(null);
-
+ 
   useEffect(() => {
     const getUser = () => {
       fetch("http://localhost:5000/auth/login/success", {
@@ -39,7 +39,8 @@ const App = () => {
       <div>
         <Navbar user={user} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} /> 
+          <Route path="/index" element={<Home />} />
           <Route
             path="/login"
             element={user ? <Navigate to="/" /> : <Login />}

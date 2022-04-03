@@ -1,0 +1,5 @@
+2022-04-03 17:40:35 [index.js] error: error message
+2022-04-03 17:40:35 [index.js] warn: warn message
+2022-04-03 17:40:35 [index.js] info: info message
+2022-04-03 17:40:35 [index.js] verbose: verbose message
+2022-04-03 17:40:35 [index.js] debug: debug message

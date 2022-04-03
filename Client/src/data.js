@@ -6,8 +6,9 @@ export const posts = [
       img: "https://images.pexels.com/photos/7963572/pexels-photo-7963572.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       desc: "DCW FINAL",
       longDesc:
-        "DCW FINAL",
+        "Nothing Here",
     },
+
 
   ];
   

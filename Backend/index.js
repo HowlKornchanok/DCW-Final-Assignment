@@ -10,7 +10,6 @@ const app = express();
 const { createLogger, format, transports } = require('winston');
 const fs = require('fs');
 const path = require('path');
-const Quote = require('inspirational-quotes');
 
 ///////////////////////morgan//////////////////////////
 
@@ -34,7 +33,7 @@ app.use(
 );
 //////////////////////auth////////////////////////////
 app.use("/auth", authRoute);
-/////////////////////REST API/////////////////////////////
+/////////////////////TEST API/////////////////////////////
 app.use(bodyParser.json());
 let users = require('./user.json');
 
@@ -46,15 +45,6 @@ app.get('/user', function (req, res, next) {
     data: users
   })
 });
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin','*');
-  res.header('Access-Control-Allow-Headers','Origin , X-Request-With, Content-Type,Accept' );
-  next();
-})
-
-app.get('/genquote',(req,res,next) => {
-  res.send(Quote.getQuote());
-})
 
 
 app.post('/user', function (req, res, next) {
