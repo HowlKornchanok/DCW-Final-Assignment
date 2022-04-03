@@ -13,3 +13,8 @@
 2022-04-03 17:43:29 [index.js] info: info message
 2022-04-03 17:43:29 [index.js] verbose: verbose message
 2022-04-03 17:43:29 [index.js] debug: debug message
+2022-04-03 17:47:47 [index.js] error: error message
+2022-04-03 17:47:47 [index.js] warn: warn message
+2022-04-03 17:47:47 [index.js] info: info message
+2022-04-03 17:47:47 [index.js] verbose: verbose message
+2022-04-03 17:47:47 [index.js] debug: debug message
